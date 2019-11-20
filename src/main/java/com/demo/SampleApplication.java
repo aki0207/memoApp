@@ -12,6 +12,7 @@ import org.springframework.core.io.ClassPathResource;
 @SpringBootApplication
 public class SampleApplication {
 
+	//sS
     public static void main(String[] args) {
         SpringApplication.run(SampleApplication.class, args);
     }
