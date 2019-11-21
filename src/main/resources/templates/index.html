@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>記事番号</th>
+            <th>タイトル</th>
+        </tr>
+        <tr th:each="article : ${list}">
+            <td th:text="${article.id}"></td>
+            <td th:text="${article.title}"></td>
+        </tr>
+    </table>
+</body>
+</html>
