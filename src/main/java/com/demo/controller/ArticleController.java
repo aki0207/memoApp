@@ -16,6 +16,11 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
+    /**
+     * 記事タイトル一覧
+     *　@param Model
+     * @return 遷移先のページ
+     */
     @RequestMapping(value="index")
     public String init(Model model) {
 
@@ -23,5 +28,16 @@ public class ArticleController {
         model.addAttribute("list",list);
 
         return "index";
+    }
+    
+    /**
+     * 記事投稿一覧
+     *　@param Model
+     * @return 遷移先のページ
+     */
+    @RequestMapping(value="create")
+    public String create(Model model) {
+
+        return "create";
     }
 }
