@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title th:txt="#{create.title}"></title>
+<title th:txt="#{create.page.title}"></title>
 	<!-- テキストエディタ「Quilljs」のライブラリ -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
@@ -13,11 +13,12 @@
      <link href="/css/create.css" th:href="@{/css/create.css}" rel="stylesheet"></link>
 </head>
 <body>
-	<input type="text" id="title" placeholder="タイトル">
+	<input type="text" id="title" th:placeholder="#{create.text.title.place.holder}">
+	<input type="text" id="tag" th:placeholder="#{create.text.tag.place.holder}">
     <div id="quill-editor_1"></div>
     <script>
-      // 通常のエディタ
       var quill_1 = QuillEditorMake("quill-editor_1")
     </script>
+    <button type="submit" class="btn btn-default" th:text="#{create.post}"></button>
 </body>
 </html>
